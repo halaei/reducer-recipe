@@ -1,5 +1,5 @@
 {
-  "name": "redux-builder",
+  "name": "reducer-recipe",
   "version": "1.0.0",
   "description": "A redux reducer builder",
   "main": "src/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/halaei/redux-builder.git"
+    "url": "git+ssh://git@github.com/halaei/reducer-recipe.git"
   },
   "keywords": [
     "redux",
@@ -20,9 +20,9 @@
   "author": "Hamid Alaei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/halaei/redux-builder/issues"
+    "url": "https://github.com/halaei/reducer-recipe/issues"
   },
-  "homepage": "https://github.com/halaei/redux-builder#readme",
+  "homepage": "https://github.com/halaei/reducer-recipe#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",

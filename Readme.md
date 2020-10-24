@@ -1,7 +1,7 @@
-# Redux Builder
+# Reducer Builder
 This package provides an efficient way to make complex reducers by combining a hierarchy of reducers.
 Using map of action types to small reducers that actually handle the give types,
-redux-builder produces more CPU-efficient (not benchmarked) reducers than the ones
+reducer-recipe produces more CPU-efficient (not benchmarked) reducers than the ones
 created by [combileReducers()](https://redux.js.org/api/combinereducers).
 On every action, combineReducers() calls all the small reducers, each with some switch-case structure without considering the fact that
 most of the small reducers actually doesn't handle the given action type.
@@ -14,7 +14,7 @@ To do so, recipe should call:
 2. r.on(actionType, reducer(state, action)): to tell the builder how the final reducer should handle an action of given type.
 
 ```javascript
-import builder from 'redux-builder';
+import builder from 'reducer-recipe';
 
 const Artist = (r) => {
     r.default({ name: 'Unknown', followers: 0, albums: [] })
