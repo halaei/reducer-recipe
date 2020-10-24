@@ -46,7 +46,8 @@ const artistReducer = (state = { name: 'Unknown', followers: 0, albums: [] }, ac
     }
 }
 ```
-## Combine recipes and reducers:
+
+## Combine recipes and reducers
 To make a bigger recipe from smaller recipes you can use `builder.combine()` function:
 ```javascript
 const combinedRecipe = builder.combine({ Album, Artist});
