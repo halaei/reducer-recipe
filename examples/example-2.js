@@ -11,8 +11,7 @@ const Artist = (r) => {
     })
     .on('publish-new-album', (state, action) => {
       return { ...state, albums: [...state.albums, action.album] };
-    })
-    .on('clear-store', () => unknown);
+    });
 };
 
 const Album = (r) => {
@@ -28,22 +27,44 @@ const Album = (r) => {
     })
     .on(['play-album', 'stop-album'], (state) => {
       return { ...state, playing: !state.playing };
-    })
-    .on('clear-store', () => unknown);
+    });
 };
 
 const User = (r) => {
   r.default(null)
       .on('login', (state, action) => {
         return action.username;
-      })
-      .on('clear-store', () => null);
+      });
+};
+
+const News = (state = [], action) => {
+    switch (action.type) {
+        case 'add-news':
+            return [action.news, ...state];
+        case 'remove-news':
+            let newState = [...state];
+            newState.pop();
+            return newState;
+        default:
+            return state;
+    }
 }
 
-const reducer = builder.buildCombined({
-  App: builder.combine({ Album, Artist}),
-  User,
-});
+const appReducer = builder.build(
+  builder.combine({
+    App: builder.combine({ Album, Artist}),
+    User,
+  }, {
+      News,
+  })
+);
+
+const reducer = (state, action) => {
+    if (action.type === 'clear-store') {
+        state = undefined;
+    }
+    return appReducer(state, action);
+}
 
 let store = reducer(undefined, { type: undefined });
 console.log(store);
@@ -54,6 +75,12 @@ console.log(store);
 store = reducer(store, {type: 'set-album', album: {name: 'new', artist: 'Foo', cover: 'cover.jpg'}});
 console.log(store);
 store = reducer(store, {type: 'play-album'})
+console.log(store);
+store = reducer(store, {type: 'add-news', news: 'First news'});
+store = reducer(store, {type: 'add-news', news: 'Second news'});
+store = reducer(store, {type: 'add-news', news: 'Third news'});
+console.log(store);
+store = reducer(store, {type: 'remove-news'});
 console.log(store);
 store = reducer(store, {type: 'clear-store'});
 console.log(store);
