@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should generate the expected states 1`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Unknown",
+      "cover": null,
+      "name": "Unknown",
+      "playing": false,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Unknown",
+    },
+  },
+  "News": Array [],
+  "User": null,
+}
+`;
+
+exports[`should generate the expected states 2`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Unknown",
+      "cover": null,
+      "name": "Unknown",
+      "playing": false,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Unknown",
+    },
+  },
+  "News": Array [],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 3`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Unknown",
+      "cover": null,
+      "name": "Unknown",
+      "playing": false,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 4`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": false,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 5`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": true,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 6`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": true,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [
+    "First news",
+  ],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 7`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": true,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [
+    "Second news",
+    "First news",
+  ],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 8`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": true,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [
+    "Third news",
+    "Second news",
+    "First news",
+  ],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 9`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Foo",
+      "cover": "cover.jpg",
+      "name": "new",
+      "playing": true,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Foo",
+    },
+  },
+  "News": Array [
+    "Third news",
+    "Second news",
+  ],
+  "User": "hamid",
+}
+`;
+
+exports[`should generate the expected states 10`] = `
+Object {
+  "App": Object {
+    "Album": Object {
+      "artist": "Unknown",
+      "cover": null,
+      "name": "Unknown",
+      "playing": false,
+    },
+    "Artist": Object {
+      "albums": Array [],
+      "followers": 0,
+      "name": "Unknown",
+    },
+  },
+  "News": Array [],
+  "User": null,
+}
+`;

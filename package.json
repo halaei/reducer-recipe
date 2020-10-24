@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "A redux reducer builder",
   "main": "src/index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "./node_modules/.bin/rimraf lib",
+    "build": "./node_modules/.bin/babel src --out-dir lib",
+    "start": "npx babel src --watch --out-dir lib",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/halaei/redux-builder/issues"
   },
-  "homepage": "https://github.com/halaei/redux-builder#readme"
+  "homepage": "https://github.com/halaei/redux-builder#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "jest": "^26.6.1",
+    "rimraf": "^3.0.2"
+  }
 }

@@ -132,7 +132,7 @@ function R() {
   return builder;
 }
 
-export const combine = (recipes, reducers = []) => (r) => {
+export const combine = (recipes, reducers = {}) => (r) => {
   r.default({});
   const keys = Object.keys(recipes);
   for (let i = 0; i < keys.length; i++) {
@@ -151,7 +151,7 @@ export const build = (reducer) => {
   reducer(r);
   return r.build();
 };
-export const buildCombined = (reducers) => build(combine(reducers));
+export const buildCombined = (recipes, reducers = {}) => build(combine(recipes, reducers));
 
 export default {
   combine,
